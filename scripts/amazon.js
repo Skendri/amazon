@@ -58,10 +58,11 @@ products.forEach((product) => {
     </button>
   </div>
     `;
-});
+}); // mbarimi i funksionit per te nxjerr tgjitha produktet ne wall
 
-document.querySelector('.js-products-grid').
-innerHTML = productsHTML;
+  // te gjitha produktet ne wall
+  document.querySelector('.js-products-grid').
+  innerHTML = productsHTML;
 
   function updateCartQuantity() {
     let cartQuantity = 0;
