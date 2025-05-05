@@ -31,8 +31,8 @@ products.forEach((product) => {
     <div class="product-price">$${formatCurrency(product.priceCents)}</div>
 
     <div class="product-quantity-container">
-      <select>
-        <option selected value="1">1</option>
+      <select id='selekti'>
+        <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
@@ -63,6 +63,14 @@ products.forEach((product) => {
   // te gjitha produktet ne wall
   document.querySelector('.js-products-grid').
   innerHTML = productsHTML;
+
+  const select = document.getElementById("selekti");
+console.log("ky eshte select", select);
+select.addEventListener("change", function() {
+  let selectedValue = document.querySelectorAll("option");
+  console.log("ky eshte selekt value", selectedValue);
+  // const selectedValue = select.options[select.selectedIndex].value;
+})
 
   function updateCartQuantity() {
     let cartQuantity = 0;
